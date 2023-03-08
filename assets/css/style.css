@@ -95,6 +95,23 @@ select {
     z-index: 35;
 }
 
+.tag {
+    background-color: green;
+    padding: 20px;
+    border-radius: 132px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.tag-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
 .main {
     grid-area: main;
 }
