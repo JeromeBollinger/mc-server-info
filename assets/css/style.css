@@ -1,0 +1,294 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+html,
+body,
+nav,
+footer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --light_grey: #E0E0E0;
+    --consulting-purpur: #3e64ac;
+    --darker-light-grey: #d1d1d1;
+    --metal-blue: #071d35;
+    --nice-blue: #231631;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 5px 0;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+body,
+input,
+textarea,
+select {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 14pt;
+    line-height: 1.25;
+    outline: none;
+    height: 1.25em;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--darker-light-grey);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 40;
+    color: black;
+    box-shadow: 0px 0px 40px 0px #3f3f3f;
+}
+
+.header span {
+    color: black;
+    margin: 0px 5px 0px 5px;
+}
+
+.header_title {
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+.header_hamburger {
+    margin-right: 10px;
+    font-size: 20pt;
+}
+
+.wrapper {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-areas: ". main .";
+    min-height: calc(100vh - 160px);
+    padding: 30px 0px 30px 0px;
+    z-index: 35;
+}
+
+.main {
+    grid-area: main;
+}
+
+.front-image {
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "content profile";
+    gap: 20px;
+}
+
+.wrapper-tiles {
+    min-width: 420px;
+    display: grid;
+    grid-template-rows: repeat(5, 400px);
+    gap: 20px;
+}
+
+.tile {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tile>h4 {
+    margin: 5px;
+    text-align: center;
+}
+
+.footer {
+    height: 160px;
+    background-color: black;
+    width: 100%;
+}
+
+.vertical_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.horizontal_flex {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.split-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.background-darker-light-grey {
+    background-color: var(--darker-light-grey);
+}
+
+.background-nicer-blue {
+    background-color: var(--nice-blue);
+}
+
+.footer_title {
+    color: white;
+    font-size: 20pt;
+}
+
+.color_white {
+    color: white;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #99355F;
+}
+
+.empty-button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.background-purpur {
+    background-color: var(--metal-blue);
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 100px;
+    right: 0px;
+}
+
+.profile-text {
+    background-color: var(--metal-blue);
+    color: white;
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.profile-text>h4 {
+    text-align: center;
+}
+
+.rounded-corners {
+    border-radius: 8px;
+}
+
+.smaller-font-size {
+    font-size: 18pt;
+}
+
+.margin-center {
+    margin: auto;
+    padding: auto;
+}
+
+.color-black {
+    color: black;
+}
+
+.background-texture {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: -5;
+}
+
+.slide-left {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+.an-fade_away {
+    opacity: 0;
+    animation-duration: 3s;
+    animation-name: fade_away;
+}
+
+.an-fade_in {
+    opacity: 1;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-name: fade_in;
+}
+
+@keyframes fade_away {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
