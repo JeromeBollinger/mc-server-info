@@ -99,11 +99,6 @@ select {
     grid-area: main;
 }
 
-.front-image {
-    height: calc(100vh - 80px);
-    width: 100%;
-}
-
 .main-grid {
     display: grid;
     grid-template-columns: 1fr auto;
