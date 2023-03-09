@@ -103,6 +103,15 @@ select {
     font-weight: 600;
 }
 
+@media screen and (max-width: 600px) {
+    .tag {
+        padding: 10px;
+        border-radius: 132px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
 .tag-div {
     display: flex;
     justify-content: center;
